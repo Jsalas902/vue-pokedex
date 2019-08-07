@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus {
+    outline: none;
+}
+
+.material-icons {
+    font-size: 20px;
+}
 
 body {
     font-family: 'Roboto', sans-serif;

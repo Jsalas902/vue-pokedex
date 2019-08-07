@@ -1,4 +1,4 @@
-var pokemons = [
+[
     {
     "id":1,
     "name":"bulbasaur",

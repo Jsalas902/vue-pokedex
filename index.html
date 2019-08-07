@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="images/favicon.ico" />
     <title>Mundo pokedex</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,7 +20,7 @@
                 <div  class="background-wrapper">
                     <div v-for="type in pokemon.types" :key="type" :style="{'background-color': typeColor[type]}"></div>
                 </div>
-                <span class="remove-pokemon"><i class="material-icons">close</i></span>
+                <span class="remove-pokemon" @click="removePokemon(pokemon)"><i class="material-icons">close</i></span>
                 <div class="image-wrapper">
                     <img :src="pokemon.image" :alt="pokemon.name" class="pokemon-image">
                 </div>
@@ -29,7 +31,6 @@
         </article>
     </main>
     <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
-    <script src="pokemons.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
