@@ -41,6 +41,38 @@ const app = new Vue({
         },
     },
     methods: {
+        beforeEnter: function (el) {
+            el.style.opacity = 0.2
+            el.style.height = '3.325'
+        },
+        beforeLeave: function (el) {
+            el.style.opacity = 0.8
+            el.style.height = '7.325'
+        },
+        enter: function (el, done) {
+            var delay = el.dataset.index * 50
+            console.log('enter delay: '+ delay)
+            console.log('enter el: '+ el)
+            setTimeout(function () {
+                Velocity(
+                el,
+                { opacity: 1, height: '10.625em' },
+                { complete: done }
+                )
+            }, delay)
+        },
+        leave: function (el, done) {
+            var delay = el.dataset.index * 50
+            console.log('leave delay: '+ delay)
+            console.log('leave el: '+ el)
+            setTimeout(function () {
+                Velocity(
+                el,
+                { opacity: 0, height: '10.625em' },
+                { complete: done }
+                )
+            }, delay)
+        },
         removePokemon(pokemonToDelete) {
             this.pokemons = this.pokemons
                 .filter(pokemon => pokemon !== pokemonToDelete);

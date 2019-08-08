@@ -36,19 +36,26 @@
             </div>
         </aside>
         <main class="main-view">
-            <article class="pokemons-list">
-                
-                <pokemon-card
-                    v-for="pokemon in filteredPokemons"
-                    :key="pokemon.id"
-                    :pokemon="pokemon"
-                    :type-color="TYPE_COLOR"
-                    @remove="removePokemon"
-                ></pokemon-card>
-
-            </article>
+            <transition-group
+                class="pokemons-list"
+                name="staggered-fade"
+                tag="article"
+                v-bind:css="false"
+                v-on:before-enter="beforeEnter"
+                v-on:enter="enter"
+                v-on:leave="leave">
+                    <pokemon-card
+                        v-for="(pokemon, index) in filteredPokemons"
+                        :key="pokemon.id"
+                        :data-index="index"
+                        :pokemon="pokemon"
+                        :type-color="TYPE_COLOR"
+                        @remove="removePokemon"
+                    ></pokemon-card>
+            </transition-group>
         </main>
     </div>
+    
     <script type="text/x-template" id="pokemon-card-template">
         <div class="pokemon-card">
             <div  class="background-wrapper">
@@ -64,6 +71,7 @@
         </div>
     </script>
     <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
