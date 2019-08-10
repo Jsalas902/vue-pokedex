@@ -12,5 +12,10 @@ _Herramientas utilizadas para crear el proyecto_
 * [HTML](#) - HyperText Markup Language
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - Cascading Style Sheets
 
+### Credits
+Nice input from @Takumari85: https://codepen.io/Takumari85/pen/RaYwpJ
+
+Nice checkbox from [@hansmaad](https://twitter.com/hansmaad): https://codepen.io/hansmaad/pen/qaGrQL
+
 ---
 ⌨️ con ❤️ por [Jsalas](https://github.com/Jsalas902) 😊
