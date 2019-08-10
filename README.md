@@ -11,3 +11,6 @@ _Herramientas utilizadas para crear el proyecto_
 * [JSON](https://www.json.org/) - El back end Json (JavaScript Object Notation) consumido con fetch
 * [HTML](#) - HyperText Markup Language
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - Cascading Style Sheets
+
+---
+⌨️ con ❤️ por [Jsalas](https://github.com/Jsalas902) 😊
